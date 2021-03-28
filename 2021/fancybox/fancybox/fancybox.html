@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fancybox</title>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js" integrity="sha512-j7/1CJweOskkQiS5RD9W8zhEG9D9vpgByNGxPIqkO5KrXrwyDAroM9aQ9w8J7oRqwxGyz429hPVk/zR6IOMtSA==" crossorigin="anonymous"></script>
+</head>
+<body>
+  <p>
+    <a data-Fancybox data-src="#hidden-content" href="">Заказать звонок</a>
+  </p>
+  <div id="hidden-content" style="display: none;">
+    <h2>Заказать звонок сейчас</h2>
+    <p>Оставьте заявку и мы вап перезвоним!</p>
+  </div>
+
+  <p>
+    <a data-fancybox data-src="#modal" class="btn" href="#">Узнать подробнее</a>
+  </p>
+  <div id="modal" style="display:none;">
+    <h2>Название услуги</h2>
+    <p>Описание услуги</p>
+    <p>
+      <a href="" data-fancybox-close class='btn'>К списку услуг</a>
+    </p>
+  </div>
+</body>
+</html>
