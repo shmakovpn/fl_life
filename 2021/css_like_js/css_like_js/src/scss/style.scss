@@ -5,4 +5,134 @@
   position: relative;
   width: 100%;
   height: 100%;
+  border: 1px solid blue;
+  background-color: cadetblue;
+
+  &__central-box {
+    position: fixed;
+    width: 30em;
+    height: 30em;
+    margin-left: -15em;
+    margin-top: -15em;
+    left: 50%;
+    top: 50%;
+    //background-color: coral;
+    //border: red;
+
+    .switcher {
+      display: none;
+    }
+
+    .switcher-label {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      background-color: darkgrey;
+      display: block;
+      border-radius: 50%;
+
+      &__text {
+        display: block;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1em;
+        font-size: 5em;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 700;
+        text-align: center;
+
+        .day {
+          display: inline;
+          color: yellow;
+        }
+
+        .night {
+          display: none;
+          color: white;
+        }
+      }
+
+      &__sun {
+        display: block;
+        background-color: yellow;
+        width: 6em;
+        height: 6em;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -10em;
+        border-radius: 50%;
+        position: absolute;
+        margin: auto;
+        color: orange;
+
+        transition: top 1s ease,
+                    width 1s ease,
+                    height 1s ease,
+                    background-color 1.1s ease-in,
+                    opacity 1.1s ease-in;
+      }
+
+      &__sun-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: 1em;
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+
+        transition: font-size 1s ease;
+      }
+    }
+
+    .switcher:checked + .switcher-label {
+      background-color: darkkhaki;
+
+      .day {
+        display: none;
+      }
+
+      .night {
+        display: inline;
+      } 
+
+      .switcher-label__sun {
+        top: 0;
+        width: 10%;
+        height: 10%;
+        background-color: red;
+        opacity: 0;
+
+        transition: top 1s ease,
+                    width 1s ease,
+                    height 1s ease,
+                    background-color 1.1s ease-in,
+                    opacity 1.1s ease-in;
+
+        .switcher-label__sun-text {
+          font-size: 0em;
+          transition: font-size 1s ease;
+        }
+      }
+    }
+  }
+
+  &__background-text {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  &__background-text-item {
+    color: darkgrey;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 2;
+  }
 }
